@@ -22,6 +22,7 @@ Refactor the implementation to improve readability and maintainability while pre
 - Preserve all working logic unless a test failure requires modification.
 - **DO NOT** change `==` to `=`, add missing return statements, or "correct" operators.
 - If original code returns `None` implicitly, do NOT add a return statement.
+- If a `return` statement is indented inside a loop in the original code, you MUST keep it inside the loop in the refactored code. Do not "fix" it by moving it outside. The specific path of execution must be identical. Check the indentation of the original `return` statement and replicate it exactly.
 
 ## Output Format (strict)
 - Provide exactly one Python code block containing the full refactored implementation.
@@ -39,8 +40,9 @@ The tests report the following failures:
 ---
 
 ## Implementation file content
-<<<IMPLEMENTATION>>>
 
+<<<IMPLEMENTATION>>>
+**CRITICAL/STRICT**: Retain all logic, bug for bug. Preserve indentation exactly.
 
 ## RAG knowledge base
 <<<RAG_KNOWLEDGE_BASE>>>
